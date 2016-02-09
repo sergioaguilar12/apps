@@ -1,0 +1,142 @@
+
+<!DOCTYPE HTML-->
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+
+<script type="text/javascript">
+    $("document").ready(function inicio(){
+    
+    $("#btnSuma").tap(function(){
+    var num=parseInt($("#txtNum1").val());
+    var num2=parseInt($("#txtNum2").val());
+    $("#txtRes").val(num+num2);
+    });
+    $("#btnResta").tap(function(){
+    var num3=parseInt($("#txtNum3").val());
+    var num4=parseInt($("#txtNum4").val());
+    $("#txtRes1").val(num3-num4);
+    });
+    $("#btnMultiplicacion").tap(function(){
+    var num5=parseInt($("#txtNum5").val());
+    var num6=parseInt($("#txtNum6").val());
+    $("#txtRes2").val(num5*num6);
+    });
+    $("#btnDivicion").tap(function(){
+    var num7=parseInt($("#txtNum7").val());
+    var num8=parseInt($("#txtNum8").val());
+    $("#txtRes3").val(num7/num8);
+    });
+    
+    });
+</script>
+
+<style type="text/css">
+    #encavezado{
+        text-align: center;
+        font-size: 14px;
+        color: red;
+        font-weight:  bold;
+    }
+    #piegagina{
+        text-align: center;
+        font-size: 8px;
+        color:chartreuse;
+        font-weight:lighter;
+    }
+</style>
+
+</head>
+
+<body>
+    <div data-role="page" id="principal">
+        <div data-role="header">
+            <h1>Mi aplicacion </h1>
+        </div>
+        <div data-role="content">
+            <p id="encavezado"> Transiciones </p>
+            <a href="#suma" data-role="button" data-transition="slideup">SUMA</a>
+            <a href="#resta" data-role="button" data-transition="slidedown">RESTA</a> 
+            <a href="#Multiplicacion" data-role="button" data-transition="top">MULTIPLICACIÓN</a> 
+            <a href="#divicion" data-role="button" data-transition="flip">DIVICIÓN</a> 
+         </div>
+        <div data-role="footer">
+           <p id="piegagina"> pie de pagina</p>
+           <div data-role="controlgroup" data-type="horizontal">
+               <a href="#segunda" class="ui-btn ui-icon-info ui-icon-left">Abrir</a>
+               <a href="http://facebook.com" class="ui-btn">Facebook</a>
+               <a href="http://twitter.com" class="ui-btn">Twitter</a>
+               
+           </div>
+        </div>
+</div>
+    
+    <div data-role="page" id="suma">
+        <div data-role="header">
+            <h1>Mi Suma </h1>
+        </div>
+        <div data-role="content">
+            <input type="text" value="" placeholder="Número 1" id="txtNum1"/>
+            <input type="text" value="" placeholder="Número 2" id="txtNum2"/>
+            <input type="text" value="" placeholder="Resultado" id="txtRes"/>
+            <input type="button" value="Sumar" id="btnSuma"/>
+            <a href="#principal" data-role="button" data-transition="Fade">Inicio</a> 
+        </div>
+        <div data-role="footer">
+           <p> pie de pagina</p>
+        </div>
+    </div>
+    
+    <div data-role="page" id="resta">
+        <div data-role="header">
+            <h1>Mi Resta </h1>
+        </div>
+        <div data-role="content">
+            <input type="text" value="" placeholder="Número 1" id="txtNum3"/>
+            <input type="text" value="" placeholder="Número 2" id="txtNum4"/>
+            <input type="text" value="" placeholder="Resultado" id="txtRes1"/>
+            <input type="button" value="Restar" id="btnResta"/>
+            <a href="#principal" data-role="button" data-transition="Flow">Inicio</a> 
+        </div>
+        <div data-role="footer">
+           <p> pie de pagina</p>
+        </div>
+    </div>
+    
+    <div data-role="page" id="Multiplicacion">
+        <div data-role="header">
+             <h1>Mi multiplicacion </h1>
+        </div>
+        <div data-role="content">
+            <input type="text" value="" placeholder="Número 1" id="txtNum5"/>
+            <input type="text" value="" placeholder="Número 2" id="txtNum6"/>
+            <input type="text" value="" placeholder="Resultado" id="txtRes2"/>
+            <input type="button" value="Multiplicar" id="btnMultiplicacion"/>
+            <a href="#principal" data-role="button" data-transition="Slidefade">Inicio</a> 
+            </div>
+        <div data-role="footer">
+           <p> pie de pagina</p>
+        </div>
+    </div>
+    
+    <div data-role="page" id="divicion">
+        <div data-role="header">
+            <h1>Mi Divición </h1>
+        </div>
+        <div data-role="content">
+            <input type="text" value="" placeholder="Número 1" id="txtNum7"/>
+            <input type="text" value="" placeholder="Número 2" id="txtNum8"/>
+            <input type="text" value="" placeholder="Resultado" id="txtRes3"/>
+            <input type="button" value="Dividir" id="btnDivicion"/>
+            <a href="#principal" data-role="button" data-transition="Turn">Inicio</a> 
+            </div>
+        <div data-role="footer">
+           <p> i.s.calejandro.gr@gmail.com </p>
+        </div>
+</div>
+</body>
+</html>
